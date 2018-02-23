@@ -32,26 +32,26 @@ for (f in 1:6) {
 # Created these unflattened matrices thinking they might be useful but never used them
 #-------------------------------------------------------------------------------------------------------------------------------
 
-images.rgb.1 <- matrix(0L,ncol=3)
-images.rgb.2 <- matrix(0L,ncol=3)
-images.rgb.3 <- matrix(0L,ncol=3)
-images.rgb.4 <- matrix(0L,ncol=3)
-images.rgb.5 <- matrix(0L,ncol=3)
-images.rgb.6 <- matrix(0L,ncol=3)
-images.rgb.7 <- matrix(0L,ncol=3)
-images.rgb.8 <- matrix(0L,ncol=3)
-images.rgb.9 <- matrix(0L,ncol=3)
-images.rgb.10 <- matrix(0L,ncol=3)
+#images.rgb.1 <- matrix(0L,ncol=3)
+#images.rgb.2 <- matrix(0L,ncol=3)
+#images.rgb.3 <- matrix(0L,ncol=3)
+#images.rgb.4 <- matrix(0L,ncol=3)
+#images.rgb.5 <- matrix(0L,ncol=3)
+#images.rgb.6 <- matrix(0L,ncol=3)
+#images.rgb.7 <- matrix(0L,ncol=3)
+#images.rgb.8 <- matrix(0L,ncol=3)
+#images.rgb.9 <- matrix(0L,ncol=3)
+#images.rgb.10 <- matrix(0L,ncol=3)
 
-for (j in 1:length(images.lab)) {
+#for (j in 1:length(images.lab)) {
 
-    cat("Processing : ",j,"\n")
-  k <- images.lab[[j]]
-  assign(paste("images.rgb.",k,sep=""),rbind(eval(parse(text = paste("images.rgb.",k,sep=""))),as.matrix(images.rgb[[j]])))
+#  cat("Processing : ",j,"\n")
+#  k <- images.lab[[j]]
+#  assign(paste("images.rgb.",k,sep=""),rbind(eval(parse(text = paste("images.rgb.",k,sep=""))),as.matrix(images.rgb[[j]])))
 
   # Usage of dataframes not ideal in this case
   #assign(paste("images.rgb.",k,sep=""),rbind.data.frame(eval(parse(text = paste("images.rgb.",k,sep=""))),images.rgb[[j]],stringsAsFactors = FALSE))
-}
+#}
 
 #-------------------------------------------------------------------------------------------------------------------------------
 # Matrix structures to store the image data of respective categories. I tried using dataframe, believe me they were REALLY SLOW!
@@ -87,7 +87,7 @@ for (j in 1:length(images.lab)) {
 
 #-------------------------------------------------------------------------------------------------------------------------------
 #Stunningly fast ColMeans for calculating means of image categories
--------------------------------------------------------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------------------------------------------------------
   
 images.rgb.df.1.mean <- matrix(colMeans(images.rgb.df.1),ncol=3072)
 images.rgb.df.2.mean <- matrix(colMeans(images.rgb.df.2),ncol=3072)
